@@ -20,7 +20,7 @@ class CurrencyConverter:
         """
         This function is used to convert currency
         """
-        if date == None:
+        if date is None:
             self.prepared_url = self.tool.prepare_url(fr_curr, to_curr, amount)
             response = requests.get(self.prepared_url)
             if response.status_code == 200:
@@ -44,3 +44,23 @@ class CurrencyConverter:
                 "Error:": "Incorrect input format"})
         else:
             return output
+
+    def historical_rates(self, fr_curr, date):
+        """
+        This function is used to get historical rates
+        """
+        self.prepared_url = self.tool.prepare_url_historical(fr_curr, date)
+        response = requests.get(self.prepared_url)
+        if response.status_code == 200:
+            self.result = response.json()
+            base_curr = self.result['base']
+            if base_curr == fr_curr:
+                output = {
+                    "Date": self.result["date"], "Source": fr_curr, "TargetRates": self.result['rates']}
+                return output
+            else:
+                raise Exception(response.status_code, {
+                                "Error:": "Failed to get historical rates"})
+        else:
+            raise Exception(response.status_code, {
+                            "Error": "Input error or service is not available"})

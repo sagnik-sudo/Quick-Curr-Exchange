@@ -4,7 +4,7 @@
 
 Currency Conversion tool useful for most web based and API applications. This supports historical data as well.
 
-Live API is up at []()
+Live API is up at [quickcurrx.deta.dev](quickcurrx.deta.dev)
 
 If you like my work, consider giving a star :)
 
