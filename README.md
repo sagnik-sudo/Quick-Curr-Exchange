@@ -34,7 +34,7 @@ This section defines the expected Input and the Output formats for the Currency 
 
 - Step 4: Checkout Swagger UI
 
-    Open the browser and navigate to `http://127.0.0.1:8000/currencies#/`
+    Open the browser and navigate to `http://127.0.0.1:8000/`
 
 ## Useful for Developers
 
