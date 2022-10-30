@@ -6,7 +6,7 @@ from src.time_series_currency import TimeSeries
 
 DESCRIPTION = """
 This is a simple open source application that allows you to fetch currency conversion data.
-You can just provide a two currencies and get the convertion as output.
+You can just provide two currencies and get the conversion as output.
 For suggestions and contributions, please visit [github.com/sagnik-sudo/Quick-Curr-Exchange](https://github.com/sagnik-sudo/Quick-Curr-Exchange/issues)
 If you like my work, please star it on [github.com/sagnik-sudo/Quick-Curr-Exchange](https://github.com/sagnik-sudo/Quick-Curr-Exchange)
 """
@@ -24,7 +24,7 @@ app = FastAPI(
 )
 
 
-@app.get("/supportedcurrencies",
+@app.options("/supportedcurrencies",
              tags=["Currency Conversion"],
              name="Fetches list of supported Currencies")
 async def get_currencies():

@@ -4,7 +4,7 @@
 
 Currency Conversion tool useful for most web based and API applications. This supports historical data as well.
 
-Live API is up at [quickcurrx.deta.dev](quickcurrx.deta.dev)
+Live API is up at [quickcurrx.herokuapp.com](https://quickcurrx.herokuapp.com/#/)
 
 If you like my work, consider giving a star :)
 
@@ -35,6 +35,12 @@ This section defines the expected Input and the Output formats for the Currency 
 - Step 4: Checkout Swagger UI
 
     Open the browser and navigate to `http://127.0.0.1:8000/`
+
+## Deployment to Heroku
+
+You can deploy this project directly to your Heroku account, by forking this project and attaching it to your environment.
+
+![Heroku Deployer](img/heroku.png)
 
 ## Useful for Developers
 
